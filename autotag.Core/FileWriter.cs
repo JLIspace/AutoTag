@@ -74,7 +74,7 @@ namespace autotag.Core {
                 if (config.mode == 0) {
                     newPath = Path.Combine(
                         Path.GetDirectoryName(filePath),
-                        EscapeFilename(String.Format(GetTVRenamePattern(config), metadata.SeriesName, metadata.Season, metadata.Episode.ToString("00"), metadata.Title) + Path.GetExtension(filePath))
+                        EscapeFilename(String.Format(GetTVRenamePattern(config), metadata.SeriesName, metadata.Season.ToString("00"), metadata.Episode.ToString("00"), metadata.Title) + Path.GetExtension(filePath))
                         );
                 } else {
                     newPath = Path.Combine(
